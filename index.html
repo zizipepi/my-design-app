@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>マイデザインアプリ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 30px 15px;
+      background: #fff7fb;
+    }
+
+    h1 {
+      color: #ff6699;
+    }
+
+    input {
+      width: 90%;
+      max-width: 400px;
+      padding: 14px;
+      font-size: 18px;
+      border: 2px solid #ff99bb;
+      border-radius: 12px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background: #ff6699;
+      color: white;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🎨 マイデザインアプリ</h1>
+
+  <p>好きな文字を入力してね</p>
+
+  <input id="text" placeholder="ここに文字を入力">
+
+  <br>
+
+  <button onclick="makeDesign()">デザインする</button>
+
+  <div id="result"></div>
+
+  <script>
+    function makeDesign() {
+      const text = document.getElementById("text").value;
+      document.getElementById("result").textContent = text;
+    }
+  </script>
+
+</body>
+</html>
